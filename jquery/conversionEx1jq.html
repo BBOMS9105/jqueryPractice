@@ -1,0 +1,33 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        /* 삭제 버튼 클릭 시 이벤트 핸들러 작동 */
+        $("#delete-btn").click(function() {
+            const playlistId = $("#playlist-id").val.trim();
+            console.log(playlistId);
+
+            const confirmation = confirm("재생목록을 삭제하시겠습니까?");
+
+            if (confirmation) {
+                /* ajax 요청 보내기 */
+                $.ajax({
+                    url: "/myPlaylist/playlist/deletePlaylist",
+                    type: "DELETE",
+                    data: {
+                        playlist_id: playlistId
+                    },
+                success: function() {
+                    alert("재생목록이 삭제되었습니다.");
+                    console.log("재생목록 삭제");
+                    window.location.href = "/myPlaylist";
+                },
+                error: function(error) {
+                    console.log("재생목록 삭제 실패");
+                    console.log("Error", error);
+                }
+                })
+            }
+        })
+    })
+</script>
+</html>
