@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag&Drop</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        #box-container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .draggable-box {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            text-align: center;
+            line-height: 100px;
+            cursor: move;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box-container">
+        <div class="draggable-box">Hello</div>
+        <div class="draggable-box">World!</div>
+        <div class="draggable-box">Drag</div>
+        <div class="draggable-box">Me!</div>
+    </div>
+    <script>
+        // $(document).ready(function () {
+        //     $(".draggable-box").draggable();
+        // });
+
+        $(document).ready(function () {
+            $("#box-container").sortable();
+        });
+    </script>
+</body>
+
+</html>
