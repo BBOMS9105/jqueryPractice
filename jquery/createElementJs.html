@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element w jQuery</title>
+    <style>
+        .newDiv {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            font-weight: bold;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="createBtn">Div 생성</button>
+    <div id="container"></div>
+    <script>
+    document.querySelector('#createBtn').addEventListener('click', () => {
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('class', 'newDiv');
+        newDiv.textContent = 'JS';
+    document.querySelector('#container').appendChild(newDiv);
+    });
+    </script>
+</body>
+</html>
