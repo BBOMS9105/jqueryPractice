@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slide-toggle-box {
+          width: 200px;
+          height: 200px;
+          background-color: #3498db;
+          color: #fff;
+          text-align: center;
+          font-size: 24px;
+          display: none;
+        }
+      </style>
+</head>
+<body>
+    <button id="toggle-btn">슬라이드 토글</button>
+    <div id="slide-toggle-box">슬라이드 열림</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#toggle-btn").click(function() {
+                $("#slide-toggle-box").slideToggle(500);
+            });
+        });
+    </script>
+</body>
+</html>
