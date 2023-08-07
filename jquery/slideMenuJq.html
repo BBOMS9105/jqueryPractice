@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .id {
+            position: relative;
+        }
+
+        .menu-list {
+            display: none;
+            position: absolute;
+            top: 25;
+            left: 0;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 0;
+            width: 150px;
+        }
+
+        .menu-list div {
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <button class="toggle-btn">메뉴</button>
+        <div class="menu-list">
+            <div>메뉴1</div>
+            <div>메뉴2</div>
+            <div>메뉴3</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".toggle-btn").click(function() {
+                $(".menu-list").slideToggle("fast");
+            });
+        });
+    </script>
+</body>
+</html>
