@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <div id="toggleDiv" style="width: 100px; height: 100px; background-color: lightcyan;">Toggle me!</div>
+    <button id="toggleBtn">Toggle</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#toggleBtn").click(function(){
+        $("#toggleDiv").toggle('slow');
+        });
+    });
+    </script>
+
+</body>
+</html>
